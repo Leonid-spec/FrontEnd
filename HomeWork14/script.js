@@ -57,5 +57,12 @@ alert('Account created successfully')
 }
 
 function showAccounts() {
-
+   if (bank.length === 0){
+    alert('Accounts list is empty')
+   }else { let accountsList = 'Accounts:\n'; 
+   for (let account of bank)
+     { accountsList += `Account Number: ${account.accountNumber}, Account Holder: ${account.accountHolderName}, Balance: ${account.balance}\n`; }
+    alert(accountsList);
 }
+}
+
