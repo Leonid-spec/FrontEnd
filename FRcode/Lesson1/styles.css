@@ -1,0 +1,38 @@
+/* селектор по элементу */
+p{
+    color: blueviolet;
+}
+
+/* селектор по id */
+#main-title{
+    color: darkgreen;
+}
+
+/* селектор по классу */
+.discription{
+    color: darkblue;
+}
+.main-discription{
+    font-size: 28px; color: brown;
+}
+span.discription{
+    font-size: 25px;
+}
+
+/* селектор по атрибуту */
+[href='#main-title']{
+    font-size: 40px;
+}
+
+/* универсальный селектор */
+*{
+    margin: 0;
+}
+
+
+
+
+/* конфликт стилей */
+h1{
+    color: red;
+}

@@ -1,0 +1,106 @@
+/* глобальные стили */
+
+
+*{
+    box-sizing: border-box;
+}
+
+body, 
+html{
+    height: 100%;
+    margin: 0px;
+    padding: 0;
+}
+
+h1, 
+h2, 
+h3,
+h4, 
+h5, 
+h6, 
+p, 
+ul, 
+ol,
+li
+{
+margin: 0;
+padding: 0;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
+/*=====*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    font-size: 40px;
+    background-color: aqua;
+}
+
+nav{
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+    align-items: center;
+}
+
+
+main{
+    flex: 1;
+    padding: 40px;
+}
+
+footer{
+    padding: 30px;
+    font-size: 28px;
+    background-color:darkgreen;
+
+}
+
+.animals-container{
+    display: flex;
+    /* height: 600px; */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20px;
+    background-color: bisque;
+}
+
+.animal-card{
+    width: 200px;
+    height: 250px;
+    padding: 20px;
+    margin: 20px;
+}
+.penguin-card{
+    background-color: grey;
+    order: 0;
+}
+.elephant-card{
+    background-color: rgb(138, 53, 53);
+    align-self: flex-start;
+    /* order: 1; */
+}
+/* .elephant-card>h2{
+    font-size: ;
+} */
+.butterfly-card{
+    background-color: rgb(162, 215, 173);
+    /* flex: 1; */
+    /* order: -1; */
+}
+.giraffe-card{
+    background-color: rgb(171, 166, 217);
+    align-self: flex-end;
+    order: 0;
+}
+
