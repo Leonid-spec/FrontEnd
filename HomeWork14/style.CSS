@@ -41,3 +41,11 @@ max-width: 300px;
 #accountList{
     list-style: none;
 }
+
+/* #remove{
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    transition: top 1.s, left 1.s
+} */

@@ -53,6 +53,8 @@ function createAccount() {
   console.log(bank);
 }
 
+
+
 // function showAccounts() {
 //   if (bank.length === 0) {
 //     alert("Accounts list is empty");
@@ -82,6 +84,10 @@ accountList.innerHTML += `
 const withdraw = document.getElementById('withdraw');
 const deposit = document.getElementById('deposit');
 
+// bankAccount.remove = function(accountNumber){
+//   accountNumber === accountId ? bankAccount.remove(accountNumber) : alert("Wrong ID");
+
+// }
 
 deposit.onclick = function(){
   operation('deposit');
@@ -112,6 +118,10 @@ operation('withdraw');
 
 };
 
+remove.onclick = function(){
+  operation("remove");
+};
+
 
 // DRY (Don`t repeat yourself)
 
@@ -124,17 +134,43 @@ function operation(operator){
 
  const accountFind = bank.find(e => e.accountNumber.toString() === accountId);
 
-if (accountFind){
-  if (operator === 'deposit'){
+// if (accountFind){
+//   if (operator === 'deposit'){
+//     accountFind.deposit(amount);
+//   } else {
+//     accountFind.withdraw(amount);
+//   } }else {
+//   alert('Account not found');
+// } 
+// accountIdInput.value = '';
+// amountInput.value = "";
+// };
+
+if (accountFind) {
+  if (operator === "deposit") {
     accountFind.deposit(amount);
-  } else {
+  } else if (operator === "withdraw") {
     accountFind.withdraw(amount);
-  } }else {
-  alert('Account not found');
-}
-  
+  } else if (operator === "remove") {
+    const index = bank.indexOf(accountFind);
+    if (index !== -1) {
+      bank.splice(index, 1); // Удаление аккаунта из массива
+      alert(`Account ID ${accountId} removed successfully.`);
+    } 
+    }
+  }
+    else {
+      alert("Account not found");
+    
+}accountIdInput.value ="";
+    amountInput.value ="";
+  }
 
-accountIdInput.value = '';
-amountInput.value = "";
-
-};
+  // const button = document.getElementById('remove'); 
+  // button.addEventListener('mouseover', () => { 
+  //   // Генерация случайных координат для перемещения кнопки 
+  //   const offsetX = Math.random() * (window.innerWidth - button.clientWidth); 
+  //   const offsetY = Math.random() * (window.innerHeight - button.clientHeight); 
+  //   // Обновление позиции кнопки 
+  //   button.style.left = `${offsetX}px`; 
+  //   button.style.top = `${offsetY}px`; });
